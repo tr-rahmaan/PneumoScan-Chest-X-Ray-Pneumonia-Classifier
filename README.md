@@ -37,7 +37,7 @@ Chest X-rays are one of the most common tools for diagnosing pneumonia, but dist
 
 The **MobileNetV2 transfer-learning model** was selected as the final model.
 
-## ✅ Results (Test Set, 624 images)
+##  Results (Test Set, 624 images)
 
 | Class    | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
@@ -55,14 +55,7 @@ The **MobileNetV2 transfer-learning model** was selected as the final model.
 - **VIRUS** is the hardest class to separate from bacterial pneumonia, dragging down macro performance.
 - Class imbalance (BACTERIA ≈ 2× the other classes) was mitigated with class weighting but viral/bacterial confusion remains the main bottleneck.
 
-## 🗂️ Project Structure
 
-```
-.
-├── computer-vision-X_ray.ipynb   # Full notebook: EDA → training → evaluation
-├── README.md
-└── (model checkpoints saved during training: best_basic_cnn.keras, best_transfer_model.keras)
-```
 
 ## ⚙️ Tech Stack
 
@@ -72,15 +65,7 @@ The **MobileNetV2 transfer-learning model** was selected as the final model.
 - Matplotlib, Seaborn
 - scikit-learn (metrics, class weighting, train/val split)
 
-## 🚀 Running the Notebook
 
-1. Download the dataset from Kaggle: `tolgadincer/labeled-chest-xray-images`
-2. Place it so the notebook's `find_dataset_root()` can locate a `train/` folder containing `NORMAL/` and `PNEUMONIA/` subfolders (defaults to a Kaggle-style `/kaggle/input/...` path — adjust if running locally)
-3. Install dependencies:
-   ```bash
-   pip install tensorflow numpy pandas matplotlib seaborn opencv-python scikit-learn
-   ```
-4. Run all cells in `computer-vision-X_ray.ipynb`
 
 ## 🔭 Possible Improvements
 
